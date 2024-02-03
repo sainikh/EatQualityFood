@@ -6,7 +6,7 @@ import kotlin.reflect.full.memberProperties
 
 fun getInstructions(drink: Drink, allKeys: List<String>): List<String> {
     val inputKeys = allKeys.filter {
-        it.contains("strInstructions", ignoreCase = true)
+        it.contains("Instructions", ignoreCase = true)
     }
     var output = inputKeys.map { key ->
         drink.javaClass.kotlin.memberProperties.firstOrNull() {
@@ -23,9 +23,9 @@ fun getInstructions(drink: Drink, allKeys: List<String>): List<String> {
 
 fun getIngredients(drink: Drink, allKeys: List<String>): List<String> {
     val inputKeys = allKeys.filter {
-        it.contains("strIngredient", ignoreCase = true)
+        it.contains("Ingredient", ignoreCase = true)
     }
-    val sortedKeys = inputKeys.sortedWith(compareBy { it.substringAfter("strIngredient").toInt() })
+    val sortedKeys = inputKeys.sortedWith(compareBy { it.substringAfter("Ingredient").toInt() })
     var output = sortedKeys.map { key ->
         drink.javaClass.kotlin.memberProperties.firstOrNull() {
             it.name == key
@@ -39,9 +39,9 @@ fun getIngredients(drink: Drink, allKeys: List<String>): List<String> {
 
 fun getMeasures(drink: Drink, allKeys: List<String>): List<String> {
     val inputKeys = allKeys.filter {
-        it.contains("strMeasure", ignoreCase = true)
+        it.contains("Measure", ignoreCase = true)
     }
-    val sortedKeys = inputKeys.sortedWith(compareBy { it.substringAfter("strMeasure").toInt() })
+    val sortedKeys = inputKeys.sortedWith(compareBy { it.substringAfter("Measure").toInt() })
     var output = sortedKeys.map { key ->
         drink.javaClass.kotlin.memberProperties.firstOrNull() {
             it.name == key

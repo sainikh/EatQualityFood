@@ -6,7 +6,8 @@ data class Drink(
     val dateModified: String,
     val idDrink: String,
     val strAlcoholic: String,
-    val strCategory: String,
+    @SerializedName("strCategory")
+    val Category: String,
     val strCreativeCommonsConfirmed: String,
     val strDrink: String,
     val strDrinkAlternate: Any,
@@ -15,45 +16,80 @@ data class Drink(
     val strIBA: String,
     val strImageAttribution: String,
     val strImageSource: String,
-    val strIngredient1: String,
-    val strIngredient10: Any,
-    val strIngredient11: Any,
-    val strIngredient12: Any,
-    val strIngredient13: Any,
-    val strIngredient14: Any,
-    val strIngredient15: Any,
-    val strIngredient2: String,
-    val strIngredient3: String,
-    val strIngredient4: String,
-    val strIngredient5: String,
-    val strIngredient6: String,
-    val strIngredient7: String,
-    val strIngredient8: Any,
-    val strIngredient9: Any,
-    val strInstructions: String,
-    val strInstructionsDE: String,
-    val strInstructionsES: Any,
-    val strInstructionsFR: Any,
-    val strInstructionsIT: String,
+    @SerializedName("strIngredient1")
+    val Ingredient1: String,
+    @SerializedName("strIngredient10")
+    val Ingredient10: Any,
+    @SerializedName("strIngredient11")
+    val Ingredient11: Any,
+    @SerializedName("strIngredient12")
+    val Ingredient12: Any,
+    @SerializedName("strIngredient13")
+    val Ingredient13: Any,
+    @SerializedName("strIngredient14")
+    val Ingredient14: Any,
+    @SerializedName("strIngredient15")
+    val Ingredient15: Any,
+    @SerializedName("strIngredient2")
+    val Ingredient2: String,
+    @SerializedName("strIngredient3")
+    val Ingredient3: String,
+    @SerializedName("strIngredient4")
+    val Ingredient4: String,
+    @SerializedName("strIngredient5")
+    val Ingredient5: String,
+    @SerializedName("strIngredient6")
+    val Ingredient6: String,
+    @SerializedName("strIngredient7")
+    val Ingredient7: String,
+    @SerializedName("strIngredient8")
+    val Ingredient8: Any,
+    @SerializedName("strIngredient9")
+    val Ingredient9: Any,
+    @SerializedName("Instructions")
+    val Instructions: String,
+    @SerializedName("strInstructionsDE")
+    val InstructionsDE: String,
+    @SerializedName("strInstructionsES")
+    val InstructionsES: Any,
+    @SerializedName("strInstructionsFR")
+    val InstructionsFR: Any,
+    @SerializedName("strInstructionsIT")
+    val InstructionsIT: String,
     @SerializedName("strInstructionsZH-HANS")
-    val strInstructionsHANS: Any,
+    val InstructionsHANS: Any,
     @SerializedName("strInstructionsZH-HANT")
-    val strInstructionsHANT: Any,
-    val strMeasure1: String,
-    val strMeasure10: Any,
-    val strMeasure11: Any,
-    val strMeasure12: Any,
-    val strMeasure13: Any,
-    val strMeasure14: Any,
-    val strMeasure15: Any,
-    val strMeasure2: String,
-    val strMeasure3: String,
-    val strMeasure4: String,
-    val strMeasure5: String,
-    val strMeasure6: String,
-    val strMeasure7: String,
-    val strMeasure8: Any,
-    val strMeasure9: Any,
+    val InstructionsHANT: Any,
+    @SerializedName("Measure1")
+    val Measure1: String,
+    @SerializedName("strMeasure10")
+    val Measure10: Any,
+    @SerializedName("strMeasure11")
+    val Measure11: Any,
+    @SerializedName("strMeasure12")
+    val Measure12: Any,
+    @SerializedName("strMeasure13")
+    val Measure13: Any,
+    @SerializedName("strMeasure14")
+    val Measure14: Any,
+    @SerializedName("strMeasure15")
+    val Measure15: Any,
+    @SerializedName("strMeasure2")
+    val Measure2: String,
+    @SerializedName("strMeasure3")
+    val Measure3: String,
+    @SerializedName("strMeasure4")
+    val Measure4: String,
+    @SerializedName("strMeasure5")
+    val Measure5: String,
+    @SerializedName("strMeasure6")
+    val Measure6: String,
+    @SerializedName("strMeasure7")
+    val Measure7: String,
+    @SerializedName("strMeasure8")
+    val Measure8: Any,
+    @SerializedName("strMeasure9")
+    val Measure9: Any,
     val strTags: String,
     val strVideo: Any
 )

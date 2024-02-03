@@ -51,8 +51,8 @@ fun Details(position: Int, viewModel: BaseViewModel) {
             items(measurementList) {
                 Text(text = it, modifier = Modifier.padding(20.dp))
             }
-            item(drink.strCategory) {
-                Text(text = "Category : " + drink.strCategory, modifier = Modifier.padding(20.dp))
+            item(drink.Category) {
+                Text(text = "Category : " + drink.Category, modifier = Modifier.padding(20.dp))
             }
 
         }
