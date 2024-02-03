@@ -52,7 +52,7 @@ fun Details(position: Int, viewModel: BaseViewModel) {
                 Text(text = it, modifier = Modifier.padding(20.dp))
             }
             item(drink.strCategory) {
-                Text(text = "Category :" + drink.strCategory, modifier = Modifier.padding(20.dp))
+                Text(text = "Category : " + drink.strCategory, modifier = Modifier.padding(20.dp))
             }
 
         }
