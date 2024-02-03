@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -30,11 +32,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -49,6 +51,12 @@ android {
     }
 }
 
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
+}
+
+
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
@@ -59,6 +67,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -70,4 +79,19 @@ dependencies {
     //Image Loading Library
     implementation ("io.coil-kt:coil-compose:1.4.0")
 
+    //Retrofit Library
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+
+    //GsonFactoryConvertor
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //Dagger Hilt
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+
+    //Navigation
+    implementation ("androidx.navigation:navigation-compose:2.7.6")
+    implementation ("org.jetbrains.kotlin:kotlin-reflect:1.9.21")
+
 }
+
