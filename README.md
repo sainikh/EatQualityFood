@@ -14,7 +14,8 @@ This Android application allows users to search for cocktails based on their inp
 
 *Screenshot: Search results grid view*
 
-![Screenshot_2](https://github.com/sainikh/EatQualityFood/assets/47454954/605870c7-6891-4002-b5d7-8a75ef9988da)
+![Screenshot_2](https://github.com/sainikh/EatQualityFood/assets/47454954/49772379-f407-47f0-a05b-71901c610cdd)
+
 
 *Screenshot: Detailed view of a selected drink*
 
